@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<h1> Home Page:</h1>
+<form method="post" th:action="@{/addTeam}">
+    <button type="submit">Add Team Page</button>
+</form>
+<form method="post" th:action="@{/editTeam}">
+    <button type="submit">Edit Team Page</button>
+</form>
+<form method="post" th:action="@{/deleteTeam}">
+    <button type="submit">Delete Team Page</button>
+</form>
+<form th:action="@{/display}">
+    <button type="submit">Display Page</button>
+</form>
+</body>
+</html>
