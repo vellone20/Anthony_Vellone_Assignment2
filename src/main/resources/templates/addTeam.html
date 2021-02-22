@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" th:href="@{~/css1/style.css}">
 </head>
 <body>
 <h1> List of all teams:</h1>
@@ -29,6 +29,9 @@
     gamesLost: <input type="text" th:field="*{gamesLost}"><br>
     points: <input type="text" th:field="*{points}"><br>
     <button type="submit">Add Team</button>
+</form>
+<form method="post" th:action="@{/index}">
+    <button type="submit">Main Page</button>
 </form>
 </body>
 </html>

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" th:href="@{~/css1/style.css}">
 </head>
 <body>
 <h1> Home Page:</h1>
+<h2> Home Page:</h2>
 <form method="post" th:action="@{/addTeam}">
     <button type="submit">Add Team Page</button>
 </form>
@@ -19,5 +20,17 @@
 <form th:action="@{/display}">
     <button type="submit">Display Page</button>
 </form>
+
+<a method="post" th:href="@{/addTeam}" >Add Team</a>
+<a method="post" th:href="@{/editTeam}" >Edit Team</a>
+<a method="post" th:href="@{/deleteTeam}" >Delete Team</a>
+<a th:href="@{/display}" >Display</a>
+
+<!--TODO HEADER AND FOOTER-->
+<!--<form method="post">-->
+<!--    <a th:href="@{/addTeam}">Add Team</a>-->
+<!--</form>-->
+
+<!--<a th:href="@{/addTeam}" >Add Team</a>-->
 </body>
 </html>

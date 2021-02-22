@@ -1,0 +1,9 @@
+table, th, td {border: 1px solid black; border-collapse: collapse; padding: 10px;}
+td{color: black; text-align: center;}
+
+tr:nth-child(even){background-color: aqua;}
+tr:nth-child(odd){background-color: yellow;}
+
+button{background:none; border:none; display: inline-block;}
+h1{color: red}
+h2{color: blue}
