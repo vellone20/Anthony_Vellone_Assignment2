@@ -36,7 +36,6 @@ public class DatabaseAccess {
     }
 
     public void deleteTeamByID(Long id){//id used as key to find team
-
         MapSqlParameterSource namedParameters = new MapSqlParameterSource();
         String query ="DELETE FROM team WHERE id = :id";
         namedParameters.addValue("id", id);

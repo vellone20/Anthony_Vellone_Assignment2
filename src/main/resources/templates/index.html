@@ -6,31 +6,20 @@
     <link rel="stylesheet" th:href="@{~/css1/style.css}">
 </head>
 <body>
+<header>
+    <table>
+        <tr>
+            <td th:insert="supplement.html :: span.SheridanLogo"></td>
+            <td class="fragment" th:insert="supplement.html :: header"></td></tr></table>
+</header>
 <h1> Home Page:</h1>
 <h2> Home Page:</h2>
-<form method="post" th:action="@{/addTeam}">
-    <button type="submit">Add Team Page</button>
-</form>
-<form method="post" th:action="@{/editTeam}">
-    <button type="submit">Edit Team Page</button>
-</form>
-<form method="post" th:action="@{/deleteTeam}">
-    <button type="submit">Delete Team Page</button>
-</form>
-<form th:action="@{/display}">
-    <button type="submit">Display Page</button>
-</form>
 
-<a method="post" th:href="@{/addTeam}" >Add Team</a>
-<a method="post" th:href="@{/editTeam}" >Edit Team</a>
-<a method="post" th:href="@{/deleteTeam}" >Delete Team</a>
+<a th:href="@{/addTeam}" >Add Team</a>
+<a th:href="@{/editTeam}" >Edit Team</a>
+<a th:href="@{/deleteTeam}" >Delete Team</a>
 <a th:href="@{/display}" >Display</a>
 
-<!--TODO HEADER AND FOOTER-->
-<!--<form method="post">-->
-<!--    <a th:href="@{/addTeam}">Add Team</a>-->
-<!--</form>-->
-
-<!--<a th:href="@{/addTeam}" >Add Team</a>-->
+<footer th:replace="supplement.html :: footer"></footer>
 </body>
 </html>

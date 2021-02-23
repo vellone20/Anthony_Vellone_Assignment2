@@ -20,7 +20,7 @@
         <td><a th:href="@{'/editTeamById/' + ${s.id}}">EDIT</a></td>
     </tr>
 </table>
-<form method="post" th:action="@{/updateTeam}" th:object="${team}">
+<form th:action="@{/updateTeam}" th:object="${team}">
     <input type="hidden" th:field="*{id}">
     Name: <input type="text" th:field="*{teamName}"><br>
     continent: <input type="text" th:field="*{continent}"><br>
@@ -31,7 +31,7 @@
     points: <input type="text" th:field="*{points}"><br>
     <input type="submit">
 </form>
-<form method="post" th:action="@{/index}">
+<form th:action="@{/index}">
     <button type="submit">Main Page</button>
 </form>
 </body>

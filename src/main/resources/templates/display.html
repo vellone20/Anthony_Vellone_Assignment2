@@ -19,7 +19,7 @@
         <td th:text="${s.points}">1000</td>
     </tr>
 </table>
-<form method="post" th:action="@{/index}" th:object="${team}">
+<form th:action="@{/index}" th:object="${team}">
     <button type="submit">Main Page</button>
 </form>
 </body>

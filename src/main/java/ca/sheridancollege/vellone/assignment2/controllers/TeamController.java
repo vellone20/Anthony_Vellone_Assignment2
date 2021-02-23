@@ -35,7 +35,7 @@ public class TeamController {
     }
 
 
-    @PostMapping("/addTeam")
+    @GetMapping("/addTeam")
     public ModelAndView addTeam(Model model){
         mv = new ModelAndView("addTeam", "teams",da.getTeams());
         mv.addObject("team", new Team());
@@ -48,7 +48,7 @@ public class TeamController {
         return mv;
     }
 
-    @PostMapping("/deleteTeam")
+    @GetMapping("/deleteTeam")
     public ModelAndView  deleteStudent(@ModelAttribute Team team){
         mv = new ModelAndView("deleteTeam", "teams",da.getTeams());
         mv.addObject("team", new Team());
@@ -62,7 +62,7 @@ public class TeamController {
     }
 
 
-    @PostMapping("/editTeam")
+    @GetMapping("/editTeam")
     public ModelAndView  editStudent(@ModelAttribute Team team){
         mv = new ModelAndView("editTeam", "teams",da.getTeams());
         mv.addObject("team", new Team());
@@ -77,7 +77,7 @@ public class TeamController {
     }
 
 
-    @PostMapping("/updateTeam")//action of form
+    @GetMapping("/updateTeam")//action of form
     public ModelAndView  updateTeam(@ModelAttribute Team team){//gets team
         da.editTeamByID(team);
         mv = new ModelAndView("redirect:/","teams",da.getTeams());
