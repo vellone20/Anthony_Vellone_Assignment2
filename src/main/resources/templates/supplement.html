@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>TODO supply a title</title>
+    <title>Header And Footer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
 </head>
 <body>
 <div th:fragment="header">
-    <p>Sheridan College PROG27545 Winter 2021</p>
+    <p>Sheridan College
+        PROG27545 Mock Exam
+        Winter 2021</p>
 </div>
-
 <footer th:fragment="footer">Copyright © 2021 by Anthony Vellone All rights reserved.</footer>
-
 <span class="SheridanLogo">
     <img th:src="@{~/css1/images/sheridan.png}">
-    </span>
-
+</span>
 </body>
 </html>

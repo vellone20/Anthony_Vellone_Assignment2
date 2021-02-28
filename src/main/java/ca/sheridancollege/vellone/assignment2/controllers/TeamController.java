@@ -43,6 +43,8 @@ public class TeamController {
     }
     @RequestMapping("/insertTeam")
     public ModelAndView  addTeam(@ModelAttribute Team team){
+        int sum= team.getGamesWon() * 3 + team.getGamesDrawn();
+        team.setPoints(sum);
         da.insertTeam(team.getTeamName(), team.getContinent(), team.getGamesPlayed(),team.getGamesWon(),team.getGamesDrawn(), team.getGamesLost(), team.getPoints());
         mv = new ModelAndView("addTeam", "teams",da.getTeams());
         return mv;
@@ -79,6 +81,9 @@ public class TeamController {
 
     @GetMapping("/updateTeam")//action of form
     public ModelAndView  updateTeam(@ModelAttribute Team team){//gets team
+
+        int sum= team.getGamesWon() * 3 + team.getGamesDrawn();
+        team.setPoints(sum);
         da.editTeamByID(team);
         mv = new ModelAndView("redirect:/","teams",da.getTeams());
         return mv;

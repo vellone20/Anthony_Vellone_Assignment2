@@ -6,6 +6,18 @@
     <link rel="stylesheet" th:href="@{~/css1/style.css}">
 </head>
 <body>
+<header>
+    <table>
+        <tr>
+            <td th:insert="supplement.html :: span.SheridanLogo"></td>
+            <td class="fragment" th:insert="supplement.html :: header"></td>
+        </tr>
+    </table>
+    <a th:href="@{/addTeam}">Add Team</a>
+    <a th:href="@{/deleteTeam}">Delete Team</a>
+    <a th:href="@{/display}">Display</a>
+    <a th:href="@{/index}">Main Page</a>
+</header>
 <h1> List of all teams:</h1>
 <table id="myTable" width = "50%" th:if="${teams} != null">
     <tr><th>Team (Country)</th><th>Continent</th><th>Played</th><th>Won</th><th>Drawn</th><th>Lost</th><th>Pts</th></tr>
@@ -20,9 +32,7 @@
         <td><a th:href="@{'/editTeamById/' + ${s.id}}">EDIT</a></td>
     </tr>
 </table>
-
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for teams.." title="Type in a team">
-
 <script>
     function myFunction() {
         var td, i, txtValue;
@@ -43,9 +53,6 @@
         }
     }
 </script>
-
-<form th:action="@{/index}" th:object="${team}">
-    <button type="submit">Main Page</button>
-</form>
+<footer th:replace="supplement.html :: footer"></footer>
 </body>
 </html>

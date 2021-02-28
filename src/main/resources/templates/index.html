@@ -10,16 +10,16 @@
     <table>
         <tr>
             <td th:insert="supplement.html :: span.SheridanLogo"></td>
-            <td class="fragment" th:insert="supplement.html :: header"></td></tr></table>
+            <td class="fragment" th:insert="supplement.html :: header"></td>
+        </tr>
+    </table>
+    <a th:href="@{/addTeam}" >Add Team</a>
+    <a th:href="@{/editTeam}" >Edit Team</a>
+    <a th:href="@{/deleteTeam}" >Delete Team</a>
+    <a th:href="@{/display}" >Display</a>
 </header>
-<h1> Home Page:</h1>
-<h2> Home Page:</h2>
-
-<a th:href="@{/addTeam}" >Add Team</a>
-<a th:href="@{/editTeam}" >Edit Team</a>
-<a th:href="@{/deleteTeam}" >Delete Team</a>
-<a th:href="@{/display}" >Display</a>
-
+<h1> Home Page</h1>
+<img width="800" height="650" th:src="@{~/css1/images/soccer.png}">
 <footer th:replace="supplement.html :: footer"></footer>
 </body>
 </html>
